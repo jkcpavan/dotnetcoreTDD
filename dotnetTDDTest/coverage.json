@@ -2,18 +2,10 @@
   "dotnetTDDApi.dll": {
     "C:\\CGX_V2\\dotnetTDD\\dotnetTDDApi\\Program.cs": {
       "dotnetTDDApi.Program": {
-        "System.Void dotnetTDDApi.Program::Main(System.String[])": {
-          "Lines": {
-            "16": 0,
-            "17": 0,
-            "18": 0
-          },
-          "Branches": []
-        },
         "Microsoft.AspNetCore.Hosting.IWebHostBuilder dotnetTDDApi.Program::CreateWebHostBuilder(System.String[])": {
           "Lines": {
-            "21": 1,
-            "22": 1
+            "23": 2,
+            "24": 2
           },
           "Branches": []
         }
@@ -23,31 +15,58 @@
       "dotnetTDDApi.Startup": {
         "Microsoft.Extensions.Configuration.IConfiguration dotnetTDDApi.Startup::get_Configuration()": {
           "Lines": {
-            "23": 0
+            "18": 0
           },
           "Branches": []
         },
         "System.Void dotnetTDDApi.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
           "Lines": {
-            "27": 1,
-            "28": 1,
-            "29": 1
+            "22": 2,
+            "23": 2,
+            "25": 2,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 2
           },
-          "Branches": []
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 25,
+              "Offset": 21,
+              "EndOffset": 46,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
         },
         "System.Void dotnetTDDApi.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
           "Lines": {
-            "33": 1,
-            "34": 1,
-            "35": 1,
-            "36": 1,
-            "37": 1,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 2,
+            "37": 2,
             "39": 0,
             "41": 0,
             "42": 0,
-            "44": 1,
-            "45": 1,
-            "46": 1
+            "43": 2,
+            "45": 2,
+            "46": 4,
+            "47": 4,
+            "48": 4,
+            "49": 4,
+            "50": 2,
+            "51": 2,
+            "52": 2
           },
           "Branches": [
             {
@@ -56,7 +75,7 @@
               "EndOffset": 11,
               "Path": 0,
               "Ordinal": 0,
-              "Hits": 1
+              "Hits": 2
             },
             {
               "Line": 34,
@@ -65,15 +84,31 @@
               "Path": 1,
               "Ordinal": 1,
               "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 46,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
             }
           ]
         },
         "System.Void dotnetTDDApi.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
           "Lines": {
-            "18": 1,
-            "19": 1,
-            "20": 1,
-            "21": 1
+            "13": 2,
+            "14": 2,
+            "15": 2,
+            "16": 2
           },
           "Branches": []
         }

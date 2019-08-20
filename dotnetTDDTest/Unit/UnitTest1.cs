@@ -12,7 +12,7 @@ namespace coreTDDUnit
         [Fact]
         public void Test_GetLastName_Controller()
         {
-            var testctrlr=new InfoController();
+            var testctrlr = new InfoController();
             Assert.NotNull(testctrlr.getLastName("Test"));
         }
         public void Dispose()
@@ -21,34 +21,45 @@ namespace coreTDDUnit
     }
 
 
-        public class DaoTest : IDisposable
+    public class DaoTest : IDisposable
     {
         [Fact]
         public void Test_GetLastName_dao()
         {
-            var testctrlr=new LastNameDAO();
+            var testctrlr = new LastNameDAO();
             Assert.NotNull(testctrlr);
         }
         [Fact]
         public void Test_GetLastName_method_dao()
         {
-            var testctrlr=new LastNameDAO();
-            Assert.NotNull(testctrlr.getLastName("test"));
+            var testctrlr = new LastNameDAO();
+            Assert.NotNull(testctrlr.GetLastName("test"));
         }
         [Fact]
         public void Test_GetLastName_method_returntype_dao()
         {
-            var testctrlr=new LastNameDAO();
-            Assert.IsType<InfoName>(testctrlr.getLastName("test"));
+            var testctrlr = new LastNameDAO();
+            Assert.IsType<InfoName>(testctrlr.GetLastName("test"));
         }
         [Fact]
         public void Test_GetLastName_method_returnnotempty_dao()
         {
-            var testctrlr=new LastNameDAO();
-            Assert.IsType<InfoName>(testctrlr.getLastName("test"));
-            Assert.NotNull(testctrlr.getLastName("test").FirstName);
-            Assert.NotNull(testctrlr.getLastName("test").LastName);
-            Assert.Equal("test",testctrlr.getLastName("test").FirstName);
+            var testctrlr = new LastNameDAO();
+            Assert.IsType<InfoName>(testctrlr.GetLastName("test"));
+            Assert.NotNull(testctrlr.GetLastName("test").FirstName);
+            Assert.NotNull(testctrlr.GetLastName("test").LastName);
+            Assert.Equal("test", testctrlr.GetLastName("test").FirstName);
+        }
+
+        [Fact]
+        public void Test_DAO_Interface()
+        {
+            ILastNameDAO test = new LastNameDAO();
+            Assert.NotNull(test);
+            Assert.IsType<InfoName>(test.GetLastName("test"));
+            Assert.NotNull(test.GetLastName("test").FirstName);
+            Assert.NotNull(test.GetLastName("test").LastName);
+            Assert.Equal("test", test.GetLastName("test").FirstName);
         }
         public void Dispose()
         {

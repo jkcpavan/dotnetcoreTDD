@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace dotnetTDDApi
 {
     public class Program
     {
+        [ExcludeFromCodeCoverageAttribute]
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();

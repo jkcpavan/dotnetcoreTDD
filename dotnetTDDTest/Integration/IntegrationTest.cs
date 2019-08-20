@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 using dotnetTDDApi;
+using System;
+
 public class IntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
 {
-    private readonly HttpClient _client;
+    private  readonly HttpClient _client;
     private readonly WebApplicationFactory<Startup> _factory;
     public IntegrationTests(WebApplicationFactory<Startup> factory)
     {
@@ -18,6 +20,7 @@ public class IntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     [Fact]
     public async Task CanGet()
     {
+       
         // The endpoint or route of the controller action.
         var httpResponse = await _client.GetAsync("/api/Info/test");
 

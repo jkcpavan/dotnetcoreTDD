@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using coreTDDApi.models;
+using dotnetTDDApi.models;
 
-namespace coreTDDApi.DAO
+namespace dotnetTDDApi.DAO
 {
     public class LastNameDAO
     {

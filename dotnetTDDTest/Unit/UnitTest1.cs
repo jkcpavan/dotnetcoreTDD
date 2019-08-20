@@ -1,9 +1,9 @@
 using System;
 using Xunit;
-using coreTDDApi.Controllers;
+using dotnetTDDApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using coreTDDApi.DAO;
-using coreTDDApi.models;
+using dotnetTDDApi.DAO;
+using dotnetTDDApi.models;
 
 namespace coreTDDUnit
 {

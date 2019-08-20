@@ -1,11 +1,7 @@
-namespace coreTDDApi.models
+namespace dotnetTDDApi.models
 {
     public class InfoName{
 
-        public InfoName()
-        {
-            FirstName=LastName="Not Set";
-        }
         public InfoName(string FirstName,string LastName)
         {
             this.FirstName=FirstName;

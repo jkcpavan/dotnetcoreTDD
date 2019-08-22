@@ -18,7 +18,7 @@ public class IntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     }
 
     [Fact]
-    public async Task CanGet()
+    public async Task Integration_can_save_lastName()
     {
        
         // The endpoint or route of the controller action.

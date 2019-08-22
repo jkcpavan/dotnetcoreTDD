@@ -67,7 +67,7 @@ namespace coreTDDUnit
 
         //private readonly LastNameDAO dao;
 
-        //public NotificationDaoTest()
+        //public LastNameDaoTest()
         //{
         //    _mockConfiguration = new Mock<IConfiguration>();
         //    _mockDbContainer = new Mock<IDbContainer>();

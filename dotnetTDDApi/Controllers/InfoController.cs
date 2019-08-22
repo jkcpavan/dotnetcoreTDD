@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnetTDDApi.DAO;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dotnetTDDApi.Controllers
@@ -14,7 +15,7 @@ namespace dotnetTDDApi.Controllers
         [HttpGet("{first}")]
         public ActionResult<string> getLastName(string first)
         {
-            return "value";
+            return new LastNameDAO().GetLastName(first).LastName;
         }
     }
 }

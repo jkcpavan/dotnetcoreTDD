@@ -15,6 +15,13 @@ namespace coreTDDUnit
             var testctrlr = new InfoController();
             Assert.NotNull(testctrlr.getLastName("Test"));
         }
+
+        [Fact]
+        public void Test_Temp_controller()
+        {
+            var testctrlr = new WeatherController();
+            Assert.NotNull(testctrlr.getLastName(2));
+        }
         public void Dispose()
         {
         }

@@ -11,34 +11,6 @@ namespace dotnetBDD
     using System.Linq;
     using Xbehave;
 
-    public class Calculator
-    {
-        public int Add(int x, int y) => x + y;
-    }
-
-    public class CalculatorFeature
-    {
-        [Scenario]
-        public void Addition(int x, int y, Calculator calculator, int answer)
-        {
-            "Given the number 1"
-                .x(() => x = 1);
-
-            "And the number 2"
-                .x(() => y = 2);
-
-            "And a calculator"
-                .x(() => calculator = new Calculator());
-
-            "When I add the numbers together"
-                .x(() => answer = calculator.Add(x, y));
-
-            "Then the answer is 3"
-                .x(() => Xunit.Assert.Equal(3, answer));
-        }
-
-    }
-
     public class BehaveIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {
         private readonly HttpClient client;
@@ -73,6 +45,39 @@ namespace dotnetBDD
 
             "Then the responsce should be 200"
                 .x(() => Xunit.Assert.Equal(HttpStatusCode.OK, answer));
+
+        }
+
+
+        [Scenario]
+        public async Task Behave_API_scenario2(string First, HttpClient client, HttpStatusCode answer)
+        {
+            HttpResponseMessage httpResponse = null;
+
+            "Given the location"
+                .x(() => First = "test");
+
+
+            "And Create Client for API"
+                .x(() => client = _factory.CreateClient());
+
+            "When I send location to API"
+                .x(async () =>
+                {
+                    httpResponse = await this.client.GetAsync("/api/Weather/Louisville");
+
+                    // Must be successful.
+                    httpResponse.EnsureSuccessStatusCode();
+                    answer = httpResponse.StatusCode;
+                    
+                });
+
+            "Then the responsce should be 200 and weather info"
+                .x(async () => {
+                    var responsce = await httpResponse.Content.ReadAsStringAsync();
+                    Xunit.Assert.Equal(HttpStatusCode.OK, answer);
+                    Assert.Contains("Temperature", responsce);
+                }) ;
 
         }
     }
